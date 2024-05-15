@@ -1,0 +1,14 @@
+<html xmlns:th="http://www.thymeleaf.org">
+  <body>
+    <p th:text="${msg}"></p>
+    <table>
+      <tr th:each="tempC: ${mydata}">
+        <td th:text="${tempC.getId()}"></td>
+        <td th:text="${tempC.getTitle()}"></td>
+        <td th:text="${tempC.getCreditPoints()}"></td>
+        <td th:text="${tempC.getProfessor().getName()}"></td>
+        <td th:text="${tempC.getProfessor().getSurname()}"></td>
+      </tr>
+    </table>
+  </body>
+</html>
